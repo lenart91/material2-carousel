@@ -27,10 +27,11 @@
     list-style: none;
     display: flex;
     position: relative;
+    height: 100%;
   }
 
   &-slide {
-    @include size(100%, 0);
+    @include size(100%, 'auto');
     display: flex;
     flex-shrink: 0;
     position: relative;

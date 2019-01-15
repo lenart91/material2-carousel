@@ -72,6 +72,16 @@ export class MatCarouselComponent
     this.maxWidth$.next();
   }
 
+  public get height(): string {
+    return this._height;
+  }
+  @Input()
+  public set height(value: string) {
+    this._height = value;
+    this.height$.next();
+  }
+
+
   @Input() public proportion = 25;
 
   @Input()
@@ -123,6 +133,9 @@ export class MatCarouselComponent
 
   private _maxWidth = 'auto';
   private maxWidth$ = new Subject<never>();
+
+  private _height = 'auto';
+  private height$ = new Subject<never>();
 
   private _loop = true;
   private loop$ = new Subject<boolean>();
