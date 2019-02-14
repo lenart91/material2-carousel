@@ -33,7 +33,7 @@
     [color]="color"
     [disabled]="!loop && currentIndex == 0"
     (click)="previous()"
-    aria-label="Previous Slide"
+    attr.aria-label="Previous Slide"
   >
   <ng-container [ngSwitch]="svgIconDefs?.arrow_back?.length > 0">
     <mat-icon *ngSwitchDefault>arrow_back</mat-icon>
@@ -47,7 +47,7 @@
     [color]="color"
     [disabled]="!loop && currentIndex == slidesList.length - 1"
     (click)="next()"
-    aria-label="Next Slide"
+    attr.aria-label="Next Slide"
   >
     <ng-container [ngSwitch]="svgIconDefs?.arrow_forward?.length > 0">
       <mat-icon *ngSwitchDefault>arrow_forward</mat-icon>
